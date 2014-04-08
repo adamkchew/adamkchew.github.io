@@ -24,6 +24,9 @@ a:hover {
 
 .inline-block {
     display: inline-block;
+    *display: inline;
+    vertical-align: top;
+    zoom: 1;
 }
 
 .block {
@@ -72,8 +75,8 @@ a:hover {
 
 .bottom-panel {
     position: fixed;
-    padding: 20px;
-    height: 20%;
+    padding: 5px 5px;
+    height: 15%;
     left:0;
     right:0;
     bottom:0;
