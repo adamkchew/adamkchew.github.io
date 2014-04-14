@@ -31,12 +31,17 @@ a:hover {
     display: block;
 }
 
-.item-1 {
+.home-page-icons-container {
     position: absolute;
     top: 36%;
     left: 0;
     right: 0;
     text-align: center;
+}
+
+.home-page-icons-container .home-page-icons {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .top-panel {
