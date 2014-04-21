@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 
-<html>
-
+<html ng-app="adamkchew">
     <head>
         <title>adamkchew</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300">
         <link rel="stylesheet" type="text/css" href="css/reset.css"/>
         <link rel="stylesheet" type="text/css" href="css/static.css"/>
         <link rel="stylesheet" type="text/css" href="css/phone.css"/>
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src='https://cdn.firebase.com/js/client/1.0.11/firebase.js'></script>
-        <script type="text/javascript" src="js/index.js"></script>
     </head>
 
-    <body>
+    <body ng-controller="HomeController">
         <div class="home-page-icons-container">
             <section class="home-page-icons">
                 <a class="inline-block" href="https://www.facebook.com/adamkchew">
@@ -44,6 +39,34 @@
                 </a>
             </section>
         </div>
+
+        <div id="messagesDiv">
+            <div ng-repeat="msg in messages"><em>{{msg.from}}</em>: {{msg.body}}</div>
+        </div>
+
+        <input type="text" ng-model="name" placeholder="Name">
+        <input type="text" ng-model="msg" ng-keydown="addMessage($event)" placeholder="Message...">
+
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
+        <script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+            var application = angular.module('adamkchew', ['firebase']);
+
+            function HomeController($scope, $firebase) {
+                var firebaseReference = new Firebase("https://radiant-fire-1724.firebaseio.com/");
+                $scope.messages = $firebase(firebaseReference);
+                $scope.addMessage = function(e) {
+                    if (e.keyCode != 13) return;
+                    $scope.messages.$add({from: $scope.name, body: $scope.msg});
+                    $scope.msg = "";
+                };
+            }
+
+        </script>
 
     </body>
 </html>
