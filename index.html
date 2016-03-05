@@ -1,64 +1,124 @@
 <!DOCTYPE html>
 
 <html ng-app="adamkchew">
-    <head>
-        <title>adamkchew</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300">
-        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
-        <link rel="stylesheet" type="text/css" href="css/static.css"/>
-        <link rel="stylesheet" type="text/css" href="css/phone.css"/>
-    </head>
+<head>
+  <title>adamkchew</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300">
+  <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+  <link rel="stylesheet" type="text/css" href="css/static.css"/>
+  <link rel="stylesheet" type="text/css" href="css/phone.css"/>
+</head>
 
-    <body ng-controller="HomeController">
-        <div class="home-page-icons-container">
-            <section class="home-page-icons">
-                <a class="inline-block" href="https://www.facebook.com/adamkchew">
-                    <img class="logo" width="75" height="75" src="assets/images/facebook.png" alt="Facebook" title="Facebook"/>
-                </a>
-            </section>
-            <section class="home-page-icons">
-                <a class="inline-block" href="https://twitter.com/adamkchew">
-                    <img class="logo" width="75" height="75" src="assets/images/twitter.png" alt="Twitter" title="Twitter">
-                </a>
-            </section>
-            <section class="home-page-icons">
-                <a class="inline-block" href="assets/documents/adamkchew-resume.pdf">
-                    <img class="logo" width="75" height="75" src="assets/images/logo.png" alt="adamkchew" title="resume"/>
-                    <div class="logo-text">adamkchew</div>
-                </a>
-            </section>
-            <section class="home-page-icons">
-                <a class="inline-block" href="https://www.github.com/adamkchew">
-                    <img class="logo" width="75" height="75" src="assets/images/github.png" alt="GitHub" title="GitHub">
-                </a>
-            </section>
-            <section class="home-page-icons">
-                <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
-                    <img class="logo" width="75" height="75" src="assets/images/linkedin.png" alt="LinkedIn" title="LinkedIn"/>
-                </a>
-            </section>
-        </div>
+<body ng-controller="HomeController">
+<div class="home-page-icons-container">
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.facebook.com/adamkchew">
+      <img class="logo" width="75" height="75" src="assets/images/facebook.png" alt="Facebook" title="Facebook"/>
+    </a>
+  </section>
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://twitter.com/adamkchew">
+      <img class="logo" width="75" height="75" src="assets/images/twitter.png" alt="Twitter" title="Twitter">
+    </a>
+  </section>
+  <section class="home-page-icons">
+    <a class="inline-block" href="assets/documents/adamkchew-resume.pdf">
+      <img class="logo" width="75" height="75" src="assets/images/logo.png" alt="adamkchew" title="resume"/>
 
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/angular.js"></script>
-        <script type="text/javascript" src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
-        <script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script>
-            var application = angular.module('adamkchew', ['firebase']);
+      <div class="logo-text">resume</div>
+    </a>
+  </section>
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.github.com/adamkchew">
+      <img class="logo" width="75" height="75" src="assets/images/github.png" alt="GitHub" title="GitHub">
+    </a>
+  </section>
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
+      <img class="logo" width="75" height="75" src="assets/images/linkedin.png" alt="LinkedIn" title="LinkedIn"/>
+    </a>
+  </section>
 
-            function HomeController($scope, $firebase) {
-                var firebaseReference = new Firebase("https://radiant-fire-1724.firebaseio.com/");
-                $scope.messages = $firebase(firebaseReference);
-                $scope.addMessage = function(e) {
-                    if (e.keyCode != 13) return;
-                    $scope.messages.$add({from: $scope.name, body: $scope.msg});
-                    $scope.msg = "";
-                };
-            }
+</div>
 
-        </script>
+<div>
 
-    </body>
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
+      <img class="logo" width="75" height="75" src="https://logo.clearbit.com/nyit.edu" alt="NYIT" title="NYIT"/>
+    </a>
+  </section>
+
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
+      <img class="logo" width="75" height="75" src="https://logo.clearbit.com/siteworx.com" alt="Siteworx" title="Siteworx"/>
+    </a>
+  </section>
+
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
+      <img class="logo" width="75" height="75" src="https://logo.clearbit.com/aarp.org" alt="AARP" title="AARP"/>
+    </a>
+  </section>
+
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
+      <img class="logo" width="75" height="75" src="https://logo.clearbit.com/citrix.com" alt="Citrix" title="Citrix"/>
+    </a>
+  </section>
+
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
+      <img class="logo" width="75" height="75" src="https://logo.clearbit.com/undp.org" alt="UNDP" title="UNDP"/>
+    </a>
+  </section>
+
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
+      <img class="logo" width="75" height="75" src="https://logo.clearbit.com/mcgladrey.com" alt="McGladrey" title="McGladrey"/>
+    </a>
+  </section>
+
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
+      <img class="logo" width="75" height="75" src="https://logo.clearbit.com/ondeck.com" alt="OnDeck" title="OnDeck"/>
+    </a>
+  </section>
+
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
+      <img class="logo" width="75" height="75" src="https://logo.clearbit.com/perqy.com" alt="Perqy" title="Perqy"/>
+    </a>
+  </section>
+
+  <section class="home-page-icons">
+    <a class="inline-block" href="https://www.linkedin.com/in/adamkchew">
+      <img class="logo" width="75" height="75" src="https://logo.clearbit.com/getcroissant.com" alt="Croissant" title="Croissant"/>
+    </a>
+  </section>
+
+</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
+<script type="text/javascript" src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+  var application = angular.module('adamkchew', ['firebase']);
+
+  function HomeController($scope, $firebase) {
+    var firebaseReference = new Firebase("https://radiant-fire-1724.firebaseio.com/");
+    $scope.messages = $firebase(firebaseReference);
+    $scope.addMessage = function(e) {
+      if(e.keyCode != 13) return;
+      $scope.messages.$add({from: $scope.name, body: $scope.msg});
+      $scope.msg = "";
+    };
+  }
+
+</script>
+
+</body>
 </html>

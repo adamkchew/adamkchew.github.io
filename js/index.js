@@ -14,6 +14,5 @@ AKC.Homepage = AKC.Homepage || {
         logoText.hide();
         logoText.fadeIn(2000);
     }
-}
-
+};
 
