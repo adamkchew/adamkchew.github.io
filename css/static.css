@@ -7,7 +7,7 @@ html {
     font-family: "Open Sans", sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
 }
@@ -21,6 +21,9 @@ a:hover {
     color: orange;
 }
 
+.text-center {
+    text-align: center;
+}
 
 .inline-block {
     display: inline-block;
@@ -42,46 +45,5 @@ a:hover {
 .home-page-icons-container .home-page-icons {
     display: inline-block;
     vertical-align: top;
-}
-
-.top-panel {
-    position: fixed;
-    padding: 20px;
-    height: 20%;
-    left:0;
-    right:0;
-    top:0;
-    border-bottom: 1px solid black;
-}
-
-.left-panel {
-    position: fixed;
-    padding: 20px;
-    width: 20%;
-    height: 100%;
-    left:0;
-    top:0;
-    bottom:0;
-    border-right: 1px solid black;
-}
-
-.right-panel {
-    position: fixed;
-    padding: 20px;
-    height: 100%;
-    width: 20%;
-    right:0;
-    top:0;
-    bottom:0;
-    border-left: 1px solid black;
-}
-
-.bottom-panel {
-    position: fixed;
-    padding: 5px 5px;
-    height: 15%;
-    left:0;
-    right:0;
-    bottom:0;
-    border-top: 1px solid black;
+    padding: 10px;
 }
