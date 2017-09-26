@@ -2,7 +2,7 @@ const path = require('path');
 const Webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const PATH = `${path.resolve(__dirname)}/static`;
+const PATH = `${path.resolve(__dirname)}/`;
 
 let config = [
   {
