@@ -1,0 +1,57 @@
+{
+  "name": "adamkchew.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "webpack --progress --display-modules --display-error-details --display-modules",
+    "dev": "webpack-dev-server --progress --open --content-base './static'  --port 3000 --history-api-fallback --hot",
+    "production": "cd ./static; rm -rf ./fonts; rm -rf ./images; rm -rf ./scripts; rm -rf ./styles; rm -rf ./views; cd ../; NODE_ENV=production npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamkchew/adamkchew.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamkchew/adamkchew.github.io/issues"
+  },
+  "engines": {
+    "node": "8.5.0"
+  },
+  "homepage": "https://github.com/adamkchew/adamkchew.github.io#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-cookies": "^1.6.6",
+    "angular-elastic": "^2.5.1",
+    "angular-route": "^1.6.6",
+    "angular-ui-bootstrap": "^2.5.0",
+    "bootstrap": "^4.0.0-beta",
+    "compression": "^1.7.0",
+    "express": "^4.15.5",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.5",
+    "webpack": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "extract-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.5.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "ng-annotate-loader": "^0.6.1",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack-dev-server": "^2.8.2"
+  }
+}
