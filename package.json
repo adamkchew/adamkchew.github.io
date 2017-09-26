@@ -7,7 +7,7 @@
     "start": "node index.js",
     "build": "webpack --progress --display-modules --display-error-details --display-modules",
     "dev": "webpack-dev-server --progress --open --content-base './'  --port 3000 --history-api-fallback --hot",
-    "production": "rm -rf ./fonts; rm -rf ./images; rm -rf ./scripts; rm -rf ./styles; rm -rf ./views; cd ../; NODE_ENV=production npm run build"
+    "production": "rm -rf ./fonts; rm -rf ./images; rm -rf ./scripts; rm -rf ./styles; rm -rf ./views; NODE_ENV=production npm run build"
   },
   "repository": {
     "type": "git",
