@@ -8,11 +8,13 @@ export default /**@ngInject*/($scope) => {
   let angles = d3.range(0, 2 * Math.PI, Math.PI / 200);
 
   let path = svg.append("g")
-    .attr("transform", "translate(" + window.innerWidth / 2 + "," + window.innerHeight / 1.5 + ")")
+    .attr("transform", "translate(" + window.innerWidth + "," + height * 1.2 + ")")
     .attr("fill", "none")
-    .attr("stroke-width", 2)
+    .attr("stroke-width", 1)
     .attr("stroke-linejoin", "round").selectAll("path").data(["cyan", "magenta", "yellow"])
-    .enter().append("path").attr("stroke", d => d)
+    .enter()
+    .append("path")
+    .attr("stroke", d => d)
     .style("mix-blend-mode", "lighten")
     .datum((d, i) => {
       return d3.radialLine()
