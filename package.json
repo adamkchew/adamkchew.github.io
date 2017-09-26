@@ -30,6 +30,7 @@
     "angular-ui-bootstrap": "^2.5.0",
     "bootstrap": "^4.0.0-beta",
     "compression": "^1.7.0",
+    "d3": "^4.10.2",
     "express": "^4.15.5",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.5",
