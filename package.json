@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "build": "webpack --progress --display-modules --display-error-details --display-modules",
+    "clean": "rm -rf .**/**/node_modules; npm install; npm run production;",
+    "update": "ncu --packageFile ./package.json -a; npm run clean;",
     "dev": "webpack-dev-server --progress --open --content-base './'  --port 3000 --history-api-fallback --hot",
     "production": "rm -rf ./fonts; rm -rf ./images; rm -rf ./scripts; rm -rf ./styles; rm -rf ./views; NODE_ENV=production npm run build"
   },
@@ -27,14 +29,14 @@
     "angular-cookies": "^1.6.6",
     "angular-elastic": "^2.5.1",
     "angular-route": "^1.6.6",
-    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-bootstrap": "^2.5.6",
     "bootstrap": "^4.0.0-beta",
-    "compression": "^1.7.0",
-    "d3": "^4.10.2",
-    "express": "^4.15.5",
+    "compression": "^1.7.1",
+    "d3": "^4.11.0",
+    "express": "^4.16.2",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.5",
-    "webpack": "^3.6.0"
+    "webpack": "^3.8.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -45,14 +47,14 @@
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.7",
     "extract-loader": "^1.0.1",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^0.11.2",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "file-loader": "^1.1.5",
     "html-loader": "^0.5.1",
-    "less": "^2.7.2",
+    "less": "^3.0.0-alpha.3",
     "less-loader": "^4.0.5",
     "ng-annotate-loader": "^0.6.1",
-    "style-loader": "^0.18.2",
-    "url-loader": "^0.5.9",
-    "webpack-dev-server": "^2.8.2"
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack-dev-server": "^2.9.2"
   }
 }

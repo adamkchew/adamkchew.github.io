@@ -6,7 +6,7 @@ const PATH = `${path.resolve(__dirname)}/`;
 
 let config = [
   {
-    watch: process.env.NODE_ENV != 'production',
+    watch: process.env.NODE_ENV !== 'production',
     entry: [
       './modules/application/stylesheets/less/styles.less',
       './modules/application/stylesheets/sass/styles.scss'
@@ -59,15 +59,15 @@ let config = [
 
       ]
     },
-    devtool: 'cheap-source-map',
+    devtool: process.env.NODE_ENV === 'production' ? 'cheap-source-map' : 'eval',
     plugins: [
       new ExtractTextPlugin({filename: './styles/application.min.css', allChunks: true}),
-      //new Webpack.optimize.UglifyJsPlugin()
+      new Webpack.optimize.UglifyJsPlugin()
     ],
     stats: {children: false}
   },
   {
-    watch: process.env.NODE_ENV != 'production',
+    watch: process.env.NODE_ENV !== 'production',
     entry: {
       application: './modules/application',
       vendor: ['angular', 'jquery', 'bootstrap']
@@ -129,7 +129,7 @@ let config = [
         },
       ]
     },
-    devtool: process.env.NODE_ENV == 'production' ? 'cheap-source-map' : 'eval',
+    devtool: process.env.NODE_ENV === 'production' ? 'cheap-source-map' : 'eval',
     plugins: [
       new Webpack.optimize.UglifyJsPlugin(),
       new Webpack.DefinePlugin({'process.env': {NODE_ENV: JSON.stringify(process.env.NODE_ENV)}}),
