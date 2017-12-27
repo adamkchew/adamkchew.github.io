@@ -74,7 +74,7 @@ let config = [
     },
     output: {
       path: PATH,
-      publicPath: '/',
+      publicPath: './',
       filename: "./scripts/[name].min.js",
     },
     module: {
@@ -91,7 +91,7 @@ let config = [
           test: /\.(css)$/,
           use: [
             {loader: 'url-loader', options: {name: 'styles/[name]-[hash:7].css', limit: 10}},
-            {loader: 'css-loader'}
+            {loader: 'css-loader'},
           ]
         },
         {
