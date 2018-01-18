@@ -1,5 +1,17 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 
+@font-face {
+  font-family: 'Cabin';
+  font-weight: 300;
+  src: url(../../fonts/Cabin/Cabin-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: 300;
+  src: url(../../fonts/ProximaNova/ProximaNova-Light.otf);
+}
+
 * {
   margin: 0;
 }
@@ -11,8 +23,8 @@ html, body {
 
 body {
   background: #3C3F41;
+  font-family: ProximaNova, Helvetica, Arial, sans-serif !important;
   font-size: 16px;
-  font-weight: 200;
   color: white;
 }
 
@@ -22,22 +34,32 @@ h1, h2, h3, h4, h5, h6 {
 
 /* visited link */
 a:link {
-  color: #dbd75d;
+  color: white;
 }
 
 /* visited link */
 a:visited {
-  color: #dbd75d;
+  color: white;
 }
 
 /* mouse over link */
 a:hover {
-  color: #dbd75d;
+  color: white;
 }
 
 /* selected link */
 a:active {
-  color: #dbd75d;
+  color: white;
+}
+
+.font-1 {
+  font-family: Cabin, Helvetica, Arial, sans-serif !important;
+  letter-spacing: 1px;
+}
+
+.font-2 {
+  font-family: ProximaNova, Helvetica, Arial, sans-serif !important;
+  letter-spacing: 1px;
 }
 
 .wrapper, .view {

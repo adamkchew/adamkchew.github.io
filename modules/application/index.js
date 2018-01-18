@@ -4,11 +4,15 @@ global.bootstrap = require('bootstrap');
 import angular from "angular";
 import angularRoute from "angular-route";
 import angularCookies from "angular-cookies";
+
 import splashModule from "../splash";
+import photographyModule from "../photography";
+import projectModule from "../project";
+import contactModule from "../contact";
 
-let application = angular.module('adamkchew', [angularRoute, angularCookies, splashModule]);
+let application = angular.module('adamkchew', [angularRoute, angularCookies, splashModule, photographyModule, projectModule, contactModule]);
 
-application.constant('API_URL', location.host === 'www.adamkchew.com' ? 'http://api.adamkchew.com' : 'http://localhost:3001');
+application.constant('API_URL', location.host === 'www.adamkchew.com' ? 'https://api.adamkchew.com' : 'http://localhost:3001');
 
 //Configurations
 application.config(/**@ngInject*/($locationProvider, $httpProvider, API_URL) => {
