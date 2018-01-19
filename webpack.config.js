@@ -90,21 +90,21 @@ let config = [
         {
           test: /\.(css)$/,
           use: [
-            {loader: 'url-loader', options: {name: 'styles/[name]-[hash:7].css', limit: 10}},
+            {loader: 'url-loader', options: {name: 'styles/[name]-[hash:7].css', limit: 8192}},
             {loader: 'css-loader'},
           ]
         },
         {
           test: /\.(less)$/,
           use: [
-            {loader: 'url-loader', options: {name: 'styles/[name]-[hash:7].css', limit: 10}},
-            {loader: 'less-loader'}
+            {loader: 'url-loader', options: {name: 'styles/[name]-[hash:7].css', mimetype: 'text/css', limit: 8192}},
+            {loader: 'less-loader'},
           ]
         },
         {
           test: /\.(scss)$/,
           use: [
-            {loader: 'url-loader', options: {name: 'styles/[name]-[hash:7].css', limit: 10}},
+            {loader: 'url-loader', options: {name: 'styles/[name]-[hash:7].css', mimetype: 'text/css', limit: 8192}},
             {loader: 'sass-loader'}
           ]
         },
