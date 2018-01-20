@@ -1,5 +1,11 @@
 //Global elements the needs to be loaded once
-global.bootstrap = require('bootstrap');
+// global.bootstrap = require('bootstrap');
+
+global.$ = require('jquery');
+window.jQuery = window.$ = global.$;
+
+//JQuery plugins
+require('jquery-lazy');
 
 import angular from "angular";
 import angularRoute from "angular-route";
