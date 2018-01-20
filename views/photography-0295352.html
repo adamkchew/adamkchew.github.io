@@ -1,61 +1,3 @@
-<style>
-
-  .photography-container {
-    height: 100%;
-  }
-
-  .photography-table-container {
-    height: 90%;
-    overflow: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .photography-container .photography-row {
-    height: 33%;
-    padding: 0 10px 12px;
-  }
-
-  .photography-container .photography-cell {
-    display: inline-block;
-    margin: 0 10px 0 0;
-    background-color: gray;
-    background-size: cover;
-    background-position: 50%;
-    width: 360px;
-    height: 100%;
-    position: relative;
-  }
-
-  .photography-container .photography-cell .photography-title {
-    background-color: rgba(0, 0, 0, 0.2);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    height: 100%;
-    padding: 10% 0;
-  }
-
-  .photography-container .photography-timeline {
-    width: 100%;
-    height: 10%;
-    background: gray;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-  }
-
-</style>
-
-
 <div class="photography-container">
 
   <div class="photography-table-container">
@@ -81,6 +23,8 @@
   <div class="photography-timeline"></div>
 
 </div>
+
+<link type="text/css" rel="stylesheet" href="data:text/css;base64,LnBob3RvZ3JhcGh5LWNvbnRhaW5lciB7CiAgaGVpZ2h0OiAxMDAlOwp9Ci5waG90b2dyYXBoeS1jb250YWluZXIgLnBob3RvZ3JhcGh5LXRhYmxlLWNvbnRhaW5lciB7CiAgaGVpZ2h0OiA5MCU7CiAgb3ZlcmZsb3c6IHNjcm9sbDsKICBvdmVyZmxvdy15OiBoaWRkZW47CiAgd2hpdGUtc3BhY2U6IG5vd3JhcDsKICAtd2Via2l0LW92ZXJmbG93LXNjcm9sbGluZzogdG91Y2g7Cn0KLnBob3RvZ3JhcGh5LWNvbnRhaW5lciAucGhvdG9ncmFwaHktcm93IHsKICBoZWlnaHQ6IDMzJTsKICBwYWRkaW5nOiAwIDEwcHggMTJweDsKfQoucGhvdG9ncmFwaHktY29udGFpbmVyIC5waG90b2dyYXBoeS1jZWxsIHsKICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CiAgbWFyZ2luOiAwIDEwcHggMCAwOwogIGJhY2tncm91bmQtY29sb3I6IGdyYXk7CiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjsKICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiA1MCU7CiAgd2lkdGg6IDM2MHB4OwogIGhlaWdodDogMTAwJTsKICBwb3NpdGlvbjogcmVsYXRpdmU7Cn0KLnBob3RvZ3JhcGh5LWNvbnRhaW5lciAucGhvdG9ncmFwaHktY2VsbCAucGhvdG9ncmFwaHktdGl0bGUgewogIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC4yKTsKICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgbGVmdDogMDsKICByaWdodDogMDsKICB0b3A6IDA7CiAgYm90dG9tOiAwOwogIGNvbG9yOiB3aGl0ZTsKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgdmVydGljYWwtYWxpZ246IG1pZGRsZTsKICBoZWlnaHQ6IDEwMCU7CiAgcGFkZGluZzogMTAlIDA7Cn0KLnBob3RvZ3JhcGh5LWNvbnRhaW5lciAucGhvdG9ncmFwaHktdGltZWxpbmUgewogIHdpZHRoOiAxMDAlOwogIGhlaWdodDogMTAlOwogIGJhY2tncm91bmQ6IGdyYXk7CiAgcG9zaXRpb246IGFic29sdXRlOwogIGJvdHRvbTogMDsKICBsZWZ0OiAwOwogIHJpZ2h0OiAwOwogIHotaW5kZXg6IDE7Cn0K">
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
