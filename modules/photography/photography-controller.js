@@ -2,8 +2,6 @@ global.PhotoSwipe = require('photoswipe/dist/photoswipe');
 global.PhotoSwipeUI_Default = require('photoswipe/dist/photoswipe-ui-default');
 
 export default /**@ngInject*/($scope) => {
-
-  console.log('hit');
   
   let images = [
     '2017-100.jpg',
@@ -71,10 +69,10 @@ export default /**@ngInject*/($scope) => {
       gallery.listen('beforeResize', () => {
         realViewportWidth = gallery.viewportSize.x * window.devicePixelRatio;
 
-        if(useLargeImages && realViewportWidth < 1000) {
+        if(useLargeImages && realViewportWidth < 2000) {
           useLargeImages = false;
           imageSrcWillChange = true;
-        } else if(!useLargeImages && realViewportWidth >= 1000) {
+        } else if(!useLargeImages && realViewportWidth >= 2000) {
           useLargeImages = true;
           imageSrcWillChange = true;
         }
