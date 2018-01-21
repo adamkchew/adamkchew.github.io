@@ -3,19 +3,25 @@
   <div class="photography-table-container">
     <div class="photography-row">
       <a href="" ng-click="showGallery($index * 3)" ng-repeat="photo in firstRowPhotos" class="no-underline">
-        <div class="photography-cell" data-src="{{photo.url}}"></div>
+        <div class="photography-cell" data-src="{{photo.url}}">
+          <div class="photography-title font-2" ng-show="photo.title">{{photo.title}}</div>
+        </div>
       </a>
     </div>
 
     <div class="photography-row">
       <a href="" ng-click="showGallery($index * 3 + 1)" ng-repeat="photo in secondRowPhotos" class="no-underline">
-        <div class="photography-cell" data-src="{{photo.url}}"></div>
+        <div class="photography-cell" data-src="{{photo.url}}">
+          <div class="photography-title font-2" ng-show="photo.title">{{photo.title}}</div>
+        </div>
       </a>
     </div>
 
     <div class="photography-row">
       <a href="" ng-click="showGallery($index * 3 + 2)" ng-repeat="photo in thirdRowPhotos" class="no-underline">
-        <div class="photography-cell" data-src="{{photo.url}}"></div>
+        <div class="photography-cell" data-src="{{photo.url}}">
+          <div class="photography-title font-2" ng-show="photo.title">{{photo.title}}</div>
+        </div>
       </a>
     </div>
   </div>
