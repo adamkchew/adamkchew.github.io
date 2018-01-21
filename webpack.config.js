@@ -124,7 +124,7 @@ let config = [
         {
           test: /\.(svg|png|gif|jpg|jpeg)(\?v=\d+\.\d+\.\d+)?$/,
           use: [
-            {loader: "url-loader", options: {name: 'images/[name]-[hash:7].[ext]', limit: 8192}}
+            {loader: "url-loader", options: {name: 'images/[name]-[hash:7].[ext]', limit: 8192}},
           ]
         },
       ]
