@@ -4,6 +4,68 @@ global.PhotoSwipeUI_Default = require('photoswipe/dist/photoswipe-ui-default');
 export default /**@ngInject*/($scope) => {
 
   let images = [
+    {path: '2017-002.jpg', title: 'Island Pond', description: ''},
+    {path: '2017-001.jpg', title: 'Catskill', description: ''},
+    {path: '2017-003.jpg', title: 'Catskill', description: ''},
+    {path: '2017-004.jpg', title: 'Catskill Camping', description: ''},
+    {path: '2017-005.jpg', title: 'Catskill Camping', description: ''},
+    {path: '2017-006.jpg', title: 'Gary', description: ''},
+    {path: '2017-007.jpg', title: 'Alice', description: ''},
+    {path: '2017-008.jpg', title: 'Alice', description: ''},
+    {path: '2017-009.jpg', title: 'Grandma', description: ''},
+    {path: '2017-010.jpg', title: 'Wisconsin', description: ''},
+
+    {path: '2017-011.jpg', title: 'Grandma & Sister', description: ''},
+    {path: '2017-012.jpg', title: 'Acadia', description: ''},
+    {path: '2017-013.jpg', title: 'DIY Slider', description: ''},
+    {path: '2017-014.jpg', title: 'Paulina', description: ''},
+    {path: '2017-015.jpg', title: 'Kaaterskill Falls', description: ''},
+    {path: '2017-028.jpg', title: 'Kaaterskill Falls', description: ''},
+    {path: '2017-016.jpg', title: 'Mandy', description: ''},
+    {path: '2017-023.jpg', title: 'Mandy', description: ''},
+    {path: '2017-017.jpg', title: 'MD5 Hackathon', description: ''},
+    {path: '2017-022.jpg', title: 'Photo Challenge Day 5', description: ''},
+    {path: '2017-018.jpg', title: 'Photo Challenge Day 9', description: ''},
+    {path: '2017-021.jpg', title: 'Photo Challenge Day 16', description: ''},
+    {path: '2017-019.jpg', title: 'Photo Challenge Day 25', description: ''},
+    {path: '2017-020.jpg', title: 'Photo Challenge Day 28', description: ''},
+
+    {path: '2017-024.jpg', title: 'Coney Island', description: ''},
+    {path: '2017-025.jpg', title: 'Nayak', description: ''},
+    {path: '2017-026.jpg', title: 'Captree', description: ''},
+    {path: '2017-027.jpg', title: 'NYIT', description: ''},
+    {path: '2017-029.jpg', title: 'Photo Challenge Dinner', description: ''},
+    {path: '2017-030.jpg', title: 'New York City', description: ''},
+
+    {path: '2017-031.jpg', title: 'Rocky Mountain', description: ''},
+    {path: '2017-032.jpg', title: 'Rocky Mountain', description: ''},
+    {path: '2017-034.jpg', title: 'Road to Yellowstone', description: ''},
+    {path: '2017-035.jpg', title: 'Eclipse', description: ''},
+    {path: '2017-036.jpg', title: 'Yellowstone Camping', description: ''},
+    {path: '2017-037.jpg', title: 'Lower Yellowstone Falls', description: ''},
+    {path: '2017-045.jpg', title: 'Yellowstone', description: ''},
+    {path: '2017-038.jpg', title: 'Bison', description: ''},
+    {path: '2017-033.jpg', title: 'Grand Teton', description: ''},
+    {path: '2017-039.jpg', title: 'Grand Teton', description: ''},
+    {path: '2017-040.jpg', title: 'Aches', description: ''},
+
+    {path: '2017-041.jpg', title: 'Aches', description: ''},
+    {path: '2017-042.jpg', title: 'Aches', description: ''},
+    {path: '2017-043.jpg', title: 'Delicate Arch', description: ''},
+    {path: '2017-044.jpg', title: 'Mesa Arch', description: ''},
+    {path: '2017-046.jpg', title: 'Bike', description: ''},
+    {path: '2017-047.jpg', title: 'NJ Transit', description: ''},
+    {path: '2017-048.jpg', title: 'Philly Ride', description: ''},
+    {path: '2017-049.jpg', title: 'Philly Ride', description: ''},
+    {path: '2017-050.jpg', title: 'SkyGarten', description: ''},
+
+    {path: '2017-051.jpg', title: 'Song', description: ''},
+    {path: '2017-052.jpg', title: 'Ping(uin)', description: ''},
+    {path: '2017-053.jpg', title: 'Catskill', description: ''},
+    {path: '2017-054.jpg', title: 'Zoltan', description: ''},
+    {path: '2017-055.jpg', title: 'Uri', description: ''},
+    {path: '2017-056.jpg', title: 'Catskill', description: ''},
+
     {path: '2017-102.jpg', title: 'Lima', description: ''},
     {path: '2017-103.jpg', title: 'Lima', description: ''},
     {path: '2017-104.jpg', title: 'Isolina Taberna Peruana', description: ''},
@@ -36,11 +98,12 @@ export default /**@ngInject*/($scope) => {
     {path: '2017-129.jpg', title: 'Torres del Paine', description: ''},
     {path: '2017-130.jpg', title: 'Magellanic Penguins', description: ''},
     {path: '2017-131.jpg', title: 'Christmas', description: ''},
-    {path: '2017-132.jpg', title: 'Coffee Challenge', description: ''}
+    {path: '2017-132.jpg', title: 'Coffee Challenge', description: ''},
   ];
 
   $scope.photos = [];
 
+  images.reverse();
   images.forEach(image => {
     $scope.photos.push({title: image.title, url: require(`./renditions/${image.path}`), original: require(`./originals/${image.path}`)})
   });
