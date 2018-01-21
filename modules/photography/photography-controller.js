@@ -3,8 +3,8 @@ global.PhotoSwipeUI_Default = require('photoswipe/dist/photoswipe-ui-default');
 
 export default /**@ngInject*/($scope) => {
 
-  $scope.photos = [];
-
+  console.log('hit');
+  
   let images = [
     '2017-100.jpg',
     '2017-101.jpg',
@@ -40,6 +40,8 @@ export default /**@ngInject*/($scope) => {
     '2017-131.jpg',
     '2017-132.jpg',
   ];
+
+  $scope.photos = [];
 
   images.forEach(image => {
     $scope.photos.push({title: '', url: require(`./renditions/${image}`), original: require(`./originals/${image}`)})
