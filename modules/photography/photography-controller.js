@@ -56,7 +56,7 @@ export default /**@ngInject*/($scope) => {
     {path: '2017-015.jpg', title: 'Kaaterskill Falls', description: ''},
     {path: '2017-028.jpg', title: 'Kaaterskill Falls', description: ''},
     // {path: '2017-016.jpg', title: 'Mandy', description: ''},
-    {path: '2017-023.jpg', title: 'Mandy', description: ''},
+    // {path: '2017-023.jpg', title: 'Mandy', description: ''},
     {path: '2017-017.jpg', title: 'MD5 Hackathon', description: ''},
     {path: '2017-022.jpg', title: 'Photo Challenge Day 5', description: ''},
     {path: '2017-018.jpg', title: 'Photo Challenge Day 9', description: ''},
