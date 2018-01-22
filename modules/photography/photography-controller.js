@@ -4,6 +4,42 @@ global.PhotoSwipeUI_Default = require('photoswipe/dist/photoswipe-ui-default');
 export default /**@ngInject*/($scope) => {
 
   let images = [
+    {path: '2015-001.jpg', title: 'Mom', description: ''},
+    {path: '2015-002.jpg', title: 'Breakneck Ridge', description: ''},
+    {path: '2015-004.jpg', title: 'Minnewaska', description: ''},
+    {path: '2015-034.jpg', title: 'Harriman State Park', description: ''},
+    {path: '2015-007.jpg', title: 'Yosemite Falls', description: ''},
+    {path: '2015-008.jpg', title: 'Mirror Lake', description: ''},
+    {path: '2015-009.jpg', title: 'Grand Canyon', description: ''},
+    {path: '2015-010.jpg', title: 'Grand Canyon', description: ''},
+
+    {path: '2015-006.jpg', title: 'New York City', description: ''},
+    {path: '2015-014.jpg', title: 'New York City', description: ''},
+    {path: '2015-011.jpg', title: 'Brooklyn', description: ''},
+    {path: '2015-012.jpg', title: 'Nisha', description: ''},
+    {path: '2015-013.jpg', title: 'Zion', description: ''},
+    {path: '2015-018.jpg', title: 'Squad', description: ''},
+    {path: '2015-019.jpg', title: 'Zion', description: ''},
+    {path: '2015-020.jpg', title: 'Zion', description: ''},
+
+    {path: '2015-015.jpg', title: 'Quilotoa', description: ''},
+    {path: '2015-016.jpg', title: 'Casa del Arbol', description: ''},
+    {path: '2015-017.jpg', title: 'Cotapaxi', description: ''},
+    {path: '2015-021.jpg', title: 'Quito', description: ''},
+    {path: '2015-022.jpg', title: 'Quito', description: ''},
+    {path: '2015-023.jpg', title: 'Quilotoa', description: ''},
+    {path: '2015-024.jpg', title: 'Quilotoa Loop', description: ''},
+    {path: '2015-031.jpg', title: 'Guayaquil', description: ''},
+    {path: '2015-025.jpg', title: 'Nicole', description: ''},
+    {path: '2015-026.jpg', title: 'Arkam', description: ''},
+    {path: '2015-027.jpg', title: 'Isla Isabela', description: ''},
+    {path: '2015-028.jpg', title: 'Isla Isabela', description: ''},
+    {path: '2015-029.jpg', title: 'Isla Isabela', description: ''},
+    {path: '2015-003.jpg', title: 'Galapagos Diving', description: ''},
+    {path: '2015-030.jpg', title: 'Christmas', description: ''},
+
+    {path: '2015-032.jpg', title: 'Hailin', description: ''},
+
     {path: '2016-001.jpg', title: 'Uluwatu Temple', description: ''},
     {path: '2016-002.jpg', title: 'Uluwatu Temple', description: ''},
     {path: '2016-003.jpg', title: 'Uluwatu Temple', description: ''},
