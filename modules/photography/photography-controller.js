@@ -4,6 +4,40 @@ global.PhotoSwipeUI_Default = require('photoswipe/dist/photoswipe-ui-default');
 export default /**@ngInject*/($scope) => {
 
   let images = [
+    {path: '2016-001.jpg', title: 'Uluwatu Temple', description: ''},
+    {path: '2016-002.jpg', title: 'Uluwatu Temple', description: ''},
+    {path: '2016-003.jpg', title: 'Uluwatu Temple', description: ''},
+    {path: '2016-004.jpg', title: 'Uluwatu Temple', description: ''},
+    {path: '2016-005.jpg', title: 'Ubud Monkey Forest', description: ''},
+    {path: '2016-006.jpg', title: 'Tegallalang Rice Terraces', description: ''},
+    {path: '2016-007.jpg', title: 'Tegallalang Rice Terraces', description: ''},
+    {path: '2016-008.jpg', title: 'Pura Ulun Danu Bratan', description: ''},
+    {path: '2016-009.jpg', title: 'Pura Ulun Danu Bratan', description: ''},
+    {path: '2016-010.jpg', title: 'Pura Ulun Danu Bratan', description: ''},
+
+    {path: '2016-011.jpg', title: 'Mount Agung', description: ''},
+    {path: '2016-012.jpg', title: 'Liang Bua', description: ''},
+    {path: '2016-014.jpg', title: 'Komodo Dragon', description: ''},
+    {path: '2016-015.jpg', title: 'Cruise', description: ''},
+    {path: '2016-016.jpg', title: 'Hailin & Sushi', description: ''},
+    {path: '2016-017.jpg', title: 'Crabbing', description: ''},
+    {path: '2016-018.jpg', title: 'Indonesia', description: ''},
+    {path: '2016-019.jpg', title: 'Coke', description: ''},
+    {path: '2016-020.jpg', title: 'Golden Gate Bridge', description: ''},
+
+    {path: '2016-021.jpg', title: 'New York City', description: ''},
+    {path: '2016-022.jpg', title: 'Golden Gate Bridge', description: ''},
+    {path: '2016-023.jpg', title: 'Golden Gate Bridge', description: ''},
+    {path: '2016-024.jpg', title: 'Yosemite', description: ''},
+    {path: '2016-025.jpg', title: 'Sunset', description: ''},
+    {path: '2016-026.jpg', title: 'Nisha', description: ''},
+    {path: '2016-027.jpg', title: 'Christmas', description: ''},
+    {path: '2016-028.jpg', title: 'Sunset', description: ''},
+    {path: '2016-029.jpg', title: 'Ada', description: ''},
+    {path: '2016-030.jpg', title: 'Alice', description: ''},
+
+    {path: '2016-031.jpg', title: 'Nisha', description: ''},
+
     {path: '2017-002.jpg', title: 'Island Pond', description: ''},
     {path: '2017-001.jpg', title: 'Catskill', description: ''},
     {path: '2017-003.jpg', title: 'Catskill', description: ''},
@@ -54,7 +88,6 @@ export default /**@ngInject*/($scope) => {
     {path: '2017-043.jpg', title: 'Delicate Arch', description: ''},
     {path: '2017-044.jpg', title: 'Mesa Arch', description: ''},
     {path: '2017-046.jpg', title: 'Philly Bike Marathon', description: ''},
-    // {path: '2017-047.jpg', title: 'NJ Transit', description: ''},
     {path: '2017-048.jpg', title: 'Philly Ride Marathon', description: ''},
     {path: '2017-049.jpg', title: 'Philly Ride Marathon', description: ''},
     {path: '2017-050.jpg', title: 'SkyGarten', description: ''},
@@ -97,8 +130,8 @@ export default /**@ngInject*/($scope) => {
     {path: '2017-128.jpg', title: 'Almirante Nieto', description: ''},
     {path: '2017-129.jpg', title: 'Torres del Paine', description: ''},
     {path: '2017-130.jpg', title: 'Magellanic Penguins', description: ''},
-    {path: '2017-131.jpg', title: 'Christmas', description: ''},
-    {path: '2017-132.jpg', title: 'Coffee Challenge', description: ''},
+    // {path: '2017-131.jpg', title: 'Christmas', description: ''},
+    // {path: '2017-132.jpg', title: 'Coffee Challenge', description: ''},
   ];
 
   $scope.photos = [];
