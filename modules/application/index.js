@@ -10,13 +10,14 @@ require('jquery-lazy');
 import angular from "angular";
 import angularRoute from "angular-route";
 import angularCookies from "angular-cookies";
-
+import angularSantize from "angular-sanitize";
 import splashModule from "../splash";
+import motionModule from "../motion";
 import photographyModule from "../photography";
 import projectModule from "../project";
 import contactModule from "../contact";
 
-let application = angular.module('adamkchew', [angularRoute, angularCookies, splashModule, photographyModule, projectModule, contactModule]);
+let application = angular.module('adamkchew', [angularRoute, angularCookies, angularSantize, splashModule, motionModule, photographyModule, projectModule, contactModule]);
 
 application.constant('API_URL', location.host === 'www.adamkchew.com' ? 'https://api.adamkchew.com' : 'http://localhost:3001');
 

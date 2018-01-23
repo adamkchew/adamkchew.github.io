@@ -112,7 +112,7 @@ let config = [
           test: /\.(js|jsx)$/, exclude: /node_modules/,
           use: [
             {loader: 'ng-annotate-loader'},
-            {loader: 'babel-loader', options: {presets: ['latest', 'stage-0']}}
+            {loader: 'babel-loader', options: {presets: ['env', 'stage-0']}}
           ]
         },
         {
