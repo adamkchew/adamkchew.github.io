@@ -42,8 +42,13 @@ application.config(/**@ngInject*/($locationProvider, $httpProvider, API_URL) => 
 });
 
 //Application start
-application.run(/**@ngInject*/($rootScope) => {
+application.run(/**@ngInject*/($rootScope, $location) => {
 
+  $rootScope.path;
+
+  $rootScope.$on("$routeChangeStart", function(event, next, current) {
+    $rootScope.path = $location.path();
+  });
 
 });
 
