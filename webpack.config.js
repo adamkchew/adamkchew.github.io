@@ -56,7 +56,12 @@ let config = [
             {loader: "url-loader", options: {name: 'images/[name]-[hash:7].[ext]', limit: 8192}}
           ]
         },
-
+        {
+          test: /\.(mp4)(\?v=\d+\.\d+\.\d+)?$/,
+          use: [
+            {loader: "url-loader", options: {name: 'videos/[name]-[hash:7].[ext]', limit: 8192}},
+          ]
+        }
       ]
     },
     devtool: process.env.NODE_ENV === 'production' ? 'cheap-source-map' : 'eval',
@@ -127,6 +132,12 @@ let config = [
             {loader: "url-loader", options: {name: 'images/[name]-[hash:7].[ext]', limit: 8192}},
           ]
         },
+        {
+          test: /\.(mp4)(\?v=\d+\.\d+\.\d+)?$/,
+          use: [
+            {loader: "url-loader", options: {name: 'videos/[name]-[hash:7].[ext]', limit: 8192}},
+          ]
+        }
       ]
     },
     devtool: process.env.NODE_ENV === 'production' ? 'cheap-source-map' : 'eval',
