@@ -9,7 +9,7 @@
     "clean": "rm -rf .**/**/node_modules; npm install; npm run production;",
     "update": "ncu --packageFile ./package.json -a; npm run clean;",
     "dev": "webpack-dev-server --progress --open --content-base './'  --port 3000 --history-api-fallback --hot",
-    "production": "rm -rf ./fonts; rm -rf ./images; rm -rf ./scripts; rm -rf ./styles; rm -rf ./views; NODE_ENV=production npm run build"
+    "production": "rm -rf ./fonts; rm -rf ./images; rm -rf ./scripts; rm -rf ./styles; rm -rf ./views; rm -rf ./videos; NODE_ENV=production npm run build"
   },
   "repository": {
     "type": "git",
@@ -31,8 +31,6 @@
     "angular-sanitize": "^1.6.8",
     "angular-ui-bootstrap": "^2.5.6",
     "bootstrap": "^4.0.0",
-    "compression": "^1.7.1",
-    "express": "^4.16.2",
     "jquery": "^3.3.1",
     "jquery-lazy": "^1.7.7",
     "photoswipe": "^4.1.2",
@@ -51,7 +49,6 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "html-loader": "^0.5.5",
-    "imagemin-webpack-plugin": "^1.6.1",
     "less": "^3.0.0-alpha.3",
     "less-loader": "^4.0.5",
     "ng-annotate-loader": "^0.6.1",

@@ -1,7 +1,6 @@
 const path = require('path');
 const Webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const PATH = `${path.resolve(__dirname)}/`;
 
@@ -148,14 +147,7 @@ let config = [
       new Webpack.optimize.LimitChunkCountPlugin({maxChunks: 15}),
       new Webpack.optimize.MinChunkSizePlugin({minChunkSize: 10000}),
       new Webpack.ProvidePlugin({$: "jquery", jQuery: "jquery", Popper: ['popper.js', 'default']}),
-      new Webpack.optimize.CommonsChunkPlugin("vendor"),
-      new ImageminPlugin({
-        pngquant: {quality: '95-100'},
-        optipng: {optimizationLevel: 1},
-        gifsicle: {optimizationLevel: 1},
-        jpegtran: {progressive: true},
-        svgo: {}
-      })
+      new Webpack.optimize.CommonsChunkPlugin("vendor")
     ],
     stats: {children: false},
     devServer: {contentBase: PATH, port: 3000, historyApiFallback: true}
