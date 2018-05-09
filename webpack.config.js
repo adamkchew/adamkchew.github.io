@@ -67,20 +67,19 @@ let config = [
     devtool: process.env.NODE_ENV === 'production' ? 'cheap-source-map' : 'eval',
     plugins: [
       new ExtractTextPlugin({filename: './styles/application.min.css', allChunks: true}),
-      new Webpack.optimize.UglifyJsPlugin()
     ],
     stats: {children: false}
   },
   {
     watch: process.env.NODE_ENV !== 'production',
     entry: {
-      application: './modules/application',
-      vendor: ['angular', 'jquery', 'bootstrap']
+      application: './modules/application'
     },
     output: {
       path: PATH,
       publicPath: './',
       filename: "./scripts/[name].min.js",
+      chunkFilename: './scripts/[name].min.js',
     },
     module: {
       rules: [
@@ -141,13 +140,32 @@ let config = [
       ]
     },
     devtool: process.env.NODE_ENV === 'production' ? 'cheap-source-map' : 'eval',
+    optimization: {
+      minimize: process.env.NODE_ENV === 'production',
+      splitChunks: {
+        chunks: "async",
+        minSize: 15000,
+        minChunks: 1,
+        maxAsyncRequests: 5,
+        maxInitialRequests: 3,
+        name: true,
+        cacheGroups: {
+          commons: {
+            test: /[\\/]node_modules[\\/]/,
+            name: "vendors",
+            chunks: "all"
+          },
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true
+          }
+        }
+      }
+    },
     plugins: [
-      new Webpack.optimize.UglifyJsPlugin(),
       new Webpack.DefinePlugin({'process.env': {NODE_ENV: JSON.stringify(process.env.NODE_ENV)}}),
-      new Webpack.optimize.LimitChunkCountPlugin({maxChunks: 15}),
-      new Webpack.optimize.MinChunkSizePlugin({minChunkSize: 10000}),
       new Webpack.ProvidePlugin({$: "jquery", jQuery: "jquery", Popper: ['popper.js', 'default']}),
-      new Webpack.optimize.CommonsChunkPlugin("vendor")
     ],
     stats: {children: false},
     devServer: {contentBase: PATH, port: 3000, historyApiFallback: true}
