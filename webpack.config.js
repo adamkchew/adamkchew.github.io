@@ -4,9 +4,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const PATH = `${path.resolve(__dirname)}/`;
 
+const PRODUCTION = process.env.NODE_ENV === 'production';
+
+
 let config = [
   {
-    watch: process.env.NODE_ENV !== 'production',
+    watch: !PRODUCTION,
     entry: [
       './modules/application/stylesheets/less/styles.less',
       './modules/application/stylesheets/sass/styles.scss'
@@ -64,14 +67,14 @@ let config = [
         }
       ]
     },
-    devtool: process.env.NODE_ENV === 'production' ? 'cheap-source-map' : 'eval',
+    devtool: PRODUCTION ? 'cheap-source-map' : 'eval',
     plugins: [
       new ExtractTextPlugin({filename: './styles/application.min.css', allChunks: true}),
     ],
     stats: {children: false}
   },
   {
-    watch: process.env.NODE_ENV !== 'production',
+    watch: !PRODUCTION,
     entry: {
       application: './modules/application'
     },
@@ -128,6 +131,7 @@ let config = [
         {
           test: /\.(svg|png|gif|jpg|jpeg)(\?v=\d+\.\d+\.\d+)?$/,
           use: [
+            {loader: "image-webpack-loader", options: {disable: !PRODUCTION}},
             {loader: "url-loader", options: {name: 'images/[name]-[hash:7].[ext]', limit: 8192}},
           ]
         },
@@ -139,9 +143,9 @@ let config = [
         }
       ]
     },
-    devtool: process.env.NODE_ENV === 'production' ? 'cheap-source-map' : 'eval',
+    devtool: PRODUCTION ? 'cheap-source-map' : 'eval',
     optimization: {
-      minimize: process.env.NODE_ENV === 'production',
+      minimize: PRODUCTION,
       splitChunks: {
         chunks: "async",
         minSize: 15000,

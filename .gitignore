@@ -1,4 +1,9 @@
-.idea
-*.iml
+# Intellij
+**/**/.idea
+**/**/*.iml
 
-node_modules
+# Mac OS
+**/**/.DS_Store
+
+# NodeJS
+**/**/node_modules
