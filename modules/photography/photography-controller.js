@@ -186,6 +186,13 @@ export default /**@ngInject*/($scope) => {
     {path: '2018-018.jpg', title: 'Trinidad', description: ''},
     {path: '2018-019.jpg', title: 'Salto del Caburni', description: ''},
     {path: '2018-020.jpg', title: 'Salto del Caburni', description: ''},
+
+    {path: '2018-021.jpg', title: 'Zoltan', description: ''},
+    {path: '2018-022.jpg', title: 'Adam', description: ''},
+    {path: '2018-023.jpg', title: 'Grandma & Serena', description: ''},
+    {path: '2018-024.jpg', title: 'Sunset', description: ''},
+    {path: '2018-025.jpg', title: 'New York City', description: ''},
+    {path: '2018-026.jpg', title: 'Alex', description: ''},
   ];
 
   $scope.photos = [];
