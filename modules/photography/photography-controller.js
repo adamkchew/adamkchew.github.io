@@ -267,6 +267,20 @@ export default /**@ngInject*/($scope) => {
 
   $(document).ready(() => {
     $('.photography-cell').lazy({appendScroll: $('div.photography-table-container')});
+
+
+    let photographyTableContainer = $('.photography-table-container');
+
+    photographyTableContainer.mousewheel((event) => {
+
+      // Only update the scroll left of the container if the mouse wheel is moved from the Y axis (horizontal scroll)
+      if(event.deltaY !== 0) {
+        let originalLeftPosition = photographyTableContainer.scrollLeft();
+        let scrolledLeftPosition = originalLeftPosition + event.deltaY;
+        photographyTableContainer.scrollLeft(scrolledLeftPosition);
+      }
+    });
+
   });
 
 

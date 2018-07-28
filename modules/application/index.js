@@ -6,6 +6,7 @@ window.jQuery = window.$ = global.$;
 
 //JQuery plugins
 require('jquery-lazy');
+require('jquery-mousewheel');
 
 import angular from "angular";
 import angularRoute from "angular-route";
