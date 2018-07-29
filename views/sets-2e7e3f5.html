@@ -1,0 +1,52 @@
+<h2 style="font-weight: 100">Sets</h2>
+<p>A collection of data that enforces unique data set and implements union, intersection, and complement functions to other sets.</p>
+
+<div><code class="execute">sets = ['a', 'b', 'c']</code></div>
+
+<br>
+<hr>
+<br>
+
+<h5 style="font-weight: 100">Insert</h5>
+<p>Adding a data will append towards the end of the sets if it does not already exist.</p>
+
+<div><code class="failure">sets.insert('b') &longrightarrow; ('b' already exist in sets)</code></div>
+<div><code class="execute">sets.insert('d')</code></div>
+<div><code class="result">sets[0] = 'a'</code></div>
+<div><code class="result">sets[1] = 'b'</code></div>
+<div><code class="result">sets[2] = 'c'</code></div>
+<div><code class="result">sets[3] = 'd'</code></div>
+
+<br>
+<hr>
+<br>
+
+<h5 style="font-weight: 100">Union</h5>
+<p>The union of two sets contains all the elements contained in either set (or both sets).</p>
+
+<div><code class="result">sets_a = ['a', 'b', 'c']</code></div>
+<div><code class="result">sets_b = ['b', 'c', 'd']</code></div>
+<div><code class="execute">union(sets_a, sets_b) &longrightarrow; ['a', 'b', 'c', 'd']</code></div>
+
+<br>
+<hr>
+<br>
+
+<h5 style="font-weight: 100">Intersection</h5>
+<p>The intersection of two sets contains only the elements that are in both sets.</p>
+
+<div><code class="result">sets_a = ['a', 'b', 'c']</code></div>
+<div><code class="result">sets_b = ['b', 'c', 'd']</code></div>
+<div><code class="execute">intersection(sets_a, sets_b) &longrightarrow; ['b', 'c']</code></div>
+
+<br>
+<hr>
+<br>
+
+<h5 style="font-weight: 100">Complement</h5>
+<p>The complement of a sets_a contains everything that is not in sets_b.</p>
+
+<div><code class="result">sets_a = ['a', 'b', 'c']</code></div>
+<div><code class="result">sets_b = ['b', 'c', 'd']</code></div>
+<div><code class="execute">complement(sets_a, sets_b) &longrightarrow; ['a']</code></div>
+<div><code class="execute">complement(sets_b, sets_a) &longrightarrow; ['d']</code></div>

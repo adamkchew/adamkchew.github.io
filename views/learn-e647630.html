@@ -1,0 +1,63 @@
+<div class="learn-container">
+
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+
+      <!-- Navigation -->
+      <div class="col-12 col-sm-4 col-md-3 col-lg-2 col-xl-2 h-100 learn-navigation-container">
+
+        <ul class="list-unstyled">
+
+          <!-- Data structure -->
+          <li>
+            <div><a href="/learn/data-structures">Data Structures</a></div>
+
+            <ul class="list-unstyled" style="padding-top:8px;">
+              <li ng-repeat="document in documents | filter: {category: 'data-structure'}">
+                <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
+            </ul>
+
+            <br>
+          </li>
+
+          <!-- Sorting algorithm -->
+          <li>
+            <div><a href="/learn/sorting-algorithm">Sorting Algorithm</a></div>
+
+            <ul class="list-unstyled" style="padding-top:8px;">
+              <li ng-repeat="document in documents | filter: {category: 'sorting-algorithm'}">
+                <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
+            </ul>
+
+            <br>
+          </li>
+
+          <!-- Search algorithm -->
+          <li>
+            <div><a href="/learn/search-algorithm">Search Algorithm</a></div>
+
+            <ul class="list-unstyled" style="padding-top:8px;">
+              <li ng-repeat="document in documents | filter: {category: 'search-algorithm'}">
+                <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
+            </ul>
+
+            <br>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Content -->
+      <div class="col-12 col-sm-8 col-md-9 col-lg-10 col-xl-10 learn-content-container">
+
+        <div ng-include="selectedDocument.template"></div>
+
+        <br>
+        <br>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<link type="text/css" rel="stylesheet" href="data:text/css;base64,LmxlYXJuLWNvbnRhaW5lciB7CiAgaGVpZ2h0OiAxMDAlOwp9Ci5sZWFybi1jb250YWluZXIgLmxlYXJuLW5hdmlnYXRpb24tY29udGFpbmVyIHsKICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuMik7CiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpOwogIHBhZGRpbmctdG9wOiAxNXB4OwogIHBhZGRpbmctYm90dG9tOiAxNXB4Owp9Ci5sZWFybi1jb250YWluZXIgLmxlYXJuLW5hdmlnYXRpb24tY29udGFpbmVyIC5zZWxlY3RlZCB7CiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7CiAgY29sb3I6IHdoaXRlOwp9Ci5sZWFybi1jb250YWluZXIgLmxlYXJuLW5hdmlnYXRpb24tY29udGFpbmVyIC51bnNlbGVjdGVkIHsKICB0ZXh0LWRlY29yYXRpb246IG5vbmU7CiAgY29sb3I6ICNkN2Q3ZDc7Cn0KLmxlYXJuLWNvbnRhaW5lciAubGVhcm4tY29udGVudC1jb250YWluZXIgewogIHBhZGRpbmctbGVmdDogMzBweDsKICBwYWRkaW5nLXJpZ2h0OiAzMHB4Owp9Ci5sZWFybi1jb250YWluZXIgLmxlYXJuLWNvbnRlbnQtY29udGFpbmVyIGNvZGUuZXhlY3V0ZSB7CiAgY29sb3I6IGxpZ2h0Z3JlZW47Cn0KLmxlYXJuLWNvbnRhaW5lciAubGVhcm4tY29udGVudC1jb250YWluZXIgY29kZS5mYWlsdXJlIHsKICBjb2xvcjogbGlnaHRjb3JhbDsKfQoubGVhcm4tY29udGFpbmVyIC5sZWFybi1jb250ZW50LWNvbnRhaW5lciBjb2RlLnJlc3VsdCB7CiAgY29sb3I6IGxpZ2h0Ymx1ZTsKfQo=">

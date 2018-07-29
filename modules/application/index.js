@@ -13,9 +13,10 @@ import splashModule from "../splash";
 import motionModule from "../motion";
 import photographyModule from "../photography";
 import projectModule from "../project";
+import learnModule from "../learn";
 import contactModule from "../contact";
 
-let application = angular.module('adamkchew', [angularRoute, angularCookies, angularSanitize, splashModule, motionModule, photographyModule, projectModule, contactModule]);
+let application = angular.module('adamkchew', [angularRoute, angularCookies, angularSanitize, splashModule, motionModule, photographyModule, projectModule, learnModule, contactModule]);
 
 //Configurations
 application.config(/**@ngInject*/($locationProvider) => {

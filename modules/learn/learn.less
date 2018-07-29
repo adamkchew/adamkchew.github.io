@@ -1,0 +1,43 @@
+.learn-container {
+  height: 100%;
+
+  .learn-navigation-container {
+    background: rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .selected {
+      text-decoration: underline;
+      color: white
+    }
+
+    .unselected {
+      text-decoration: none;
+      color: #d7d7d7;
+    }
+
+  }
+
+  .learn-content-container {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    code {
+      &.execute {
+        color: lightgreen;
+      }
+
+      &.failure {
+        color: lightcoral;
+      }
+
+      &.result {
+        color: lightblue;
+      }
+
+    }
+
+  }
+
+}
