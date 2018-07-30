@@ -1,5 +1,5 @@
 <h2 style="font-weight: 100">Single Linked List</h2>
-<p>A linear node-to-node data structure which every node holds a reference to the next node.</p>
+<p>A one-way linear node-to-node data structure which every node holds a reference to the next node.</p>
 
 <div><code class="execute">single_linked_list = node('a') &rightarrow; node('b') &rightarrow; node('c') &rightarrow; node('d')</code></div>
 
@@ -8,8 +8,8 @@
 <br>
 
 <h5 style="font-weight: 100">Search</h5>
-<p>Since this data structure only knows it's next node, it will have to recursively search through the root node to the last node for the data set.</p>
-<div><code class="execute">search(single_linked_list, 'c')</code></div>
+<p>Since this data structure only knows it's next node, it will have to recursively search the head node to the tail node for the data set.</p>
+<div><code class="execute">search(node('a'), 'c')</code></div>
 <div><code class="result">search(node('a'), 'c') &longrightarrow; (not equal; search next node)</code></div>
 <div><code class="result">search(node('b'), 'c') &longrightarrow; (not equal; search next node)</code></div>
 <div><code class="result">search(node('c'), 'c')</code></div>
@@ -19,7 +19,7 @@
 <br>
 
 <h5 style="font-weight: 100">Insert</h5>
-<p>Recursively find the last node and set the next node to data.</p>
+<p>Recursively search the tail node and set the next node to data.</p>
 
 <div><code class="result">single_linked_list = node('a') &rightarrow; node('b') &rightarrow; node('c') &rightarrow; node('d')</code></div>
 <div><code class="execute">insert(single_linked_list, 'e')</code></div>
@@ -30,7 +30,7 @@
 <br>
 
 <h5 style="font-weight: 100">Deletion</h5>
-<p>Upon a deletion of a node, relink the previous node to the next node.</p>
+<p>Upon a deletion of a middle node, relink the previous_node.next_node to the deleted_node.next_node.</p>
 
 <div><code class="result">single_linked_list = node('a') &rightarrow; node('b') &rightarrow; node('c') &rightarrow; node('d') &rightarrow; node('e')</code></div>
 <div><code class="execute">delete(single_linked_list, 'b')</code></div>
