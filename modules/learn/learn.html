@@ -1,58 +1,77 @@
 <div class="learn-container">
 
-  <div class="container-fluid h-100">
-    <div class="row h-100">
+  <div class="container-fluid">
+    <div class="row">
 
       <!-- Navigation -->
-      <div class="col-12 col-sm-4 col-md-3 col-lg-2 col-xl-2 h-100 learn-navigation-container">
+      <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-2 learn-navigation-container">
 
-        <ul class="list-unstyled">
+        <!-- Mobile -->
+        <div class="d-block d-md-none">
+          <div class="dropdown">
+            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="d-block no-underline gray" style="padding-top: 15px; padding-bottom: 15px;">
+              <div class="float-left">{{selectedDocument.name}}</div>
+              <div class="float-right">&blacktriangledown;</div>
+              <div class="clearfix"></div>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" ng-href="{{document.path}}" ng-repeat="document in documents" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a>
+            </div>
+          </div>
+        </div>
 
-          <!-- Data structure -->
-          <li>
-            <div><a href="/learn/data-structures">Data Structures</a></div>
+        <!-- Desktop -->
+        <div class="d-none d-md-block">
+          <ul class="list-unstyled" style="padding-top: 15px; padding-bottom: 15px;">
 
-            <ul class="list-unstyled" style="padding-top:8px;">
-              <li ng-repeat="document in documents | filter: {category: 'data-structure'}">
-                <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
-            </ul>
+            <!-- Data structure -->
+            <li>
+              <div><a href="/learn/data-structures">Data Structures</a></div>
 
-            <br>
-          </li>
+              <ul class="list-unstyled" style="padding-top:8px;">
+                <li ng-repeat="document in documents | filter: {category: 'data-structure'}">
+                  <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
+              </ul>
 
-          <!-- Sorting algorithm -->
-          <li>
-            <div><a href="/learn/sorting-algorithm">Sorting Algorithm</a></div>
+              <br>
+            </li>
 
-            <ul class="list-unstyled" style="padding-top:8px;">
-              <li ng-repeat="document in documents | filter: {category: 'sorting-algorithm'}">
-                <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
-            </ul>
+            <!-- Sorting algorithm -->
+            <li>
+              <div><a href="/learn/sorting-algorithm">Sorting Algorithm</a></div>
 
-            <br>
-          </li>
+              <ul class="list-unstyled" style="padding-top:8px;">
+                <li ng-repeat="document in documents | filter: {category: 'sorting-algorithm'}">
+                  <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
+              </ul>
 
-          <!-- Search algorithm -->
-          <li>
-            <div><a href="/learn/search-algorithm">Search Algorithm</a></div>
+              <br>
+            </li>
 
-            <ul class="list-unstyled" style="padding-top:8px;">
-              <li ng-repeat="document in documents | filter: {category: 'search-algorithm'}">
-                <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
-            </ul>
+            <!-- Search algorithm -->
+            <li>
+              <div><a href="/learn/search-algorithm">Search Algorithm</a></div>
 
-            <br>
-          </li>
-        </ul>
+              <ul class="list-unstyled" style="padding-top:8px;">
+                <li ng-repeat="document in documents | filter: {category: 'search-algorithm'}">
+                  <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
+              </ul>
+
+              <br>
+            </li>
+          </ul>
+        </div>
+
       </div>
 
       <!-- Content -->
-      <div class="col-12 col-sm-8 col-md-9 col-lg-10 col-xl-10 learn-content-container">
+      <div class="col-12 col-sm-12 col-md-9 col-lg-10 col-xl-10 learn-content-container">
+
+        <br class="d-block d-md-none">
 
         <div ng-include="selectedDocument.template"></div>
 
-        <br>
-        <br>
+        <br class="d-block d-md-none">
 
       </div>
     </div>

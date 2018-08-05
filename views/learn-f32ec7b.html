@@ -1,0 +1,82 @@
+<div class="learn-container">
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Navigation -->
+      <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-2 learn-navigation-container">
+
+        <!-- Mobile -->
+        <div class="d-block d-md-none">
+          <div class="dropdown">
+            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="d-block no-underline gray" style="padding-top: 15px; padding-bottom: 15px;">
+              <div class="float-left">{{selectedDocument.name}}</div>
+              <div class="float-right">&blacktriangledown;</div>
+              <div class="clearfix"></div>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" ng-href="{{document.path}}" ng-repeat="document in documents" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop -->
+        <div class="d-none d-md-block">
+          <ul class="list-unstyled" style="padding-top: 15px; padding-bottom: 15px;">
+
+            <!-- Data structure -->
+            <li>
+              <div><a href="/learn/data-structures">Data Structures</a></div>
+
+              <ul class="list-unstyled" style="padding-top:8px;">
+                <li ng-repeat="document in documents | filter: {category: 'data-structure'}">
+                  <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
+              </ul>
+
+              <br>
+            </li>
+
+            <!-- Sorting algorithm -->
+            <li>
+              <div><a href="/learn/sorting-algorithm">Sorting Algorithm</a></div>
+
+              <ul class="list-unstyled" style="padding-top:8px;">
+                <li ng-repeat="document in documents | filter: {category: 'sorting-algorithm'}">
+                  <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
+              </ul>
+
+              <br>
+            </li>
+
+            <!-- Search algorithm -->
+            <li>
+              <div><a href="/learn/search-algorithm">Search Algorithm</a></div>
+
+              <ul class="list-unstyled" style="padding-top:8px;">
+                <li ng-repeat="document in documents | filter: {category: 'search-algorithm'}">
+                  <a ng-href="{{document.path}}" ng-class="{'selected': path === document.path, 'unselected': path !== document.path}">{{document.name}}</a></li>
+              </ul>
+
+              <br>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Content -->
+      <div class="col-12 col-sm-12 col-md-9 col-lg-10 col-xl-10 learn-content-container">
+
+        <br class="d-block d-md-none">
+
+        <div ng-include="selectedDocument.template"></div>
+
+        <br class="d-block d-md-none">
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<link type="text/css" rel="stylesheet" href="data:text/css;base64,LmxlYXJuLWNvbnRhaW5lciB7CiAgaGVpZ2h0OiAxMDAlOwp9Ci5sZWFybi1jb250YWluZXIgLmxlYXJuLW5hdmlnYXRpb24tY29udGFpbmVyIHsKICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuMik7CiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgcmdiYSgwLCAwLCAwLCAwLjEpOwp9Ci5sZWFybi1jb250YWluZXIgLmxlYXJuLW5hdmlnYXRpb24tY29udGFpbmVyIC5zZWxlY3RlZCB7CiAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7CiAgY29sb3I6IHdoaXRlOwp9Ci5sZWFybi1jb250YWluZXIgLmxlYXJuLW5hdmlnYXRpb24tY29udGFpbmVyIC51bnNlbGVjdGVkIHsKICB0ZXh0LWRlY29yYXRpb246IG5vbmU7CiAgY29sb3I6ICNkN2Q3ZDc7Cn0KLmxlYXJuLWNvbnRhaW5lciAubGVhcm4tbmF2aWdhdGlvbi1jb250YWluZXIgLmRyb3Bkb3duIC5kcm9wZG93bi1tZW51IHsKICB3aWR0aDogMTAwJTsKICBtYXgtaGVpZ2h0OiA0MDBweDsKICBvdmVyZmxvdy14OiBhdXRvOwogIGJvcmRlci1yYWRpdXM6IDJweDsKICBiYWNrZ3JvdW5kOiAjMzAzMjM0OwogIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMCwgMCwgMCwgMC4xKTsKICBwYWRkaW5nOiAwOwp9Ci5sZWFybi1jb250YWluZXIgLmxlYXJuLW5hdmlnYXRpb24tY29udGFpbmVyIC5kcm9wZG93biAuZHJvcGRvd24taXRlbSB7CiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMCwgMCwgMCwgMC4xKTsKICBwYWRkaW5nOiAxMHB4IDE1cHg7Cn0KLmxlYXJuLWNvbnRhaW5lciAubGVhcm4tbmF2aWdhdGlvbi1jb250YWluZXIgLmRyb3Bkb3duIC5kcm9wZG93bi1pdGVtOmZvY3VzIHsKICBiYWNrZ3JvdW5kOiAjMUYyMTIzOwp9Ci5sZWFybi1jb250YWluZXIgLmxlYXJuLW5hdmlnYXRpb24tY29udGFpbmVyIC5kcm9wZG93biAuZHJvcGRvd24taXRlbTpob3ZlciB7CiAgYmFja2dyb3VuZDogIzFGMjEyMzsKfQoubGVhcm4tY29udGFpbmVyIC5sZWFybi1jb250ZW50LWNvbnRhaW5lciB7CiAgcGFkZGluZy1sZWZ0OiAyMHB4OwogIHBhZGRpbmctcmlnaHQ6IDIwcHg7Cn0KLmxlYXJuLWNvbnRhaW5lciAubGVhcm4tY29udGVudC1jb250YWluZXIgY29kZS5leGVjdXRlIHsKICBjb2xvcjogbGlnaHRncmVlbjsKfQoubGVhcm4tY29udGFpbmVyIC5sZWFybi1jb250ZW50LWNvbnRhaW5lciBjb2RlLmZhaWx1cmUgewogIGNvbG9yOiBsaWdodGNvcmFsOwp9Ci5sZWFybi1jb250YWluZXIgLmxlYXJuLWNvbnRlbnQtY29udGFpbmVyIGNvZGUucmVzdWx0IHsKICBjb2xvcjogbGlnaHRibHVlOwp9Cg==">
