@@ -213,6 +213,20 @@ export default /**@ngInject*/($scope) => {
     {path: '2018/2018-044.jpg', title: 'Kaaterskill Falls', description: ''},
     {path: '2018/2018-045.jpg', title: 'Kaaterskill Falls', description: ''},
 
+    {path: '2018/2018-046.jpg', title: 'Honda Hawk', description: ''},
+    {path: '2018/2018-047.jpg', title: 'Tesla', description: ''},
+    {path: '2018/2018-048.jpg', title: 'Remy', description: ''},
+    {path: '2018/2018-049.jpg', title: 'Kumo & Remy', description: ''},
+    {path: '2018/2018-050.jpg', title: 'Remy', description: ''},
+    {path: '2018/2018-051.jpg', title: 'Weedon Island Preserve', description: ''},
+    {path: '2018/2018-052.jpg', title: 'TransferWise Family', description: ''},
+    {path: '2018/2018-053.jpg', title: 'Tampa', description: ''},
+    {path: '2018/2018-054.jpg', title: 'University of Tampa', description: ''},
+    {path: '2018/2018-055.jpg', title: 'University of Tampa', description: ''},
+    {path: '2018/2018-056.jpg', title: 'Tampa', description: ''},
+    {path: '2018/2018-057.jpg', title: 'Christmas', description: ''},
+    {path: '2018/2018-058.jpg', title: 'Great Grandma', description: ''},
+
   ];
 
   $scope.photos = [];

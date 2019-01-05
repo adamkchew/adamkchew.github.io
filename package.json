@@ -7,7 +7,7 @@
     "start": "node index.js",
     "build": "./node_modules/webpack/bin/webpack.js --progress --display-modules --display-error-details --display-modules",
     "clean": "rm -rf .**/**/node_modules; npm install; npm run production;",
-    "update": "./node_modules/bin/ncu --packageFile ./package.json -a; npm run clean;",
+    "upgrade": "./node_modules/bin/ncu --packageFile ./package.json -a; npm run clean;",
     "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --content-base './'  --port 3000 --history-api-fallback --hot",
     "production": "rm -rf ./fonts; rm -rf ./images; rm -rf ./scripts; rm -rf ./styles; rm -rf ./views; rm -rf ./videos; NODE_ENV=production npm run build"
   },
