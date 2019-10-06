@@ -25,7 +25,7 @@ let config = [
           test: /\.(css)$/,
           use: ExtractTextPlugin.extract({
             use: [
-              {loader: 'css-loader', options: {minimize: true}}
+              {loader: 'css-loader'}
             ], fallback: "style-loader"
           })
         },
@@ -33,7 +33,7 @@ let config = [
           test: /\.(less)$/,
           use: ExtractTextPlugin.extract({
             use: [
-              {loader: 'css-loader', options: {minimize: true}},
+              {loader: 'css-loader'},
               {loader: 'less-loader', options: {minimize: true}}
             ], fallback: "style-loader"
           })
@@ -42,7 +42,7 @@ let config = [
           test: /\.(scss)$/,
           use: ExtractTextPlugin.extract({
             use: [
-              {loader: 'css-loader', options: {minimize: true}},
+              {loader: 'css-loader'},
               {loader: 'less-loader', options: {minimize: true}}
             ], fallback: "style-loader"
           })
