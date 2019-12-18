@@ -233,7 +233,7 @@ export default /**@ngInject*/($scope) => {
 
   images.reverse();
   images.forEach(image => {
-    $scope.photos.push({title: image.title, url: require(`./renditions/${image.path}`), original: require(`./originals/${image.path}`)})
+    $scope.photos.push({title: image.title, url: require(`./sm/${image.path}`), original: require(`./originals/${image.path}`)})
   });
 
   $scope.firstRowPhotos = [];
@@ -302,7 +302,6 @@ export default /**@ngInject*/($scope) => {
   $(document).ready(() => {
     $('.photography-cell').lazy({appendScroll: $('div.photography-table-container')});
 
-
     let photographyTableContainer = $('.photography-table-container');
 
     photographyTableContainer.mousewheel((event) => {
@@ -314,6 +313,10 @@ export default /**@ngInject*/($scope) => {
         photographyTableContainer.scrollLeft(scrolledLeftPosition);
       }
     });
+
+    // $('#photography-timeline-selector').draggable({
+    //   axis: "y"
+    // });
 
   });
 
