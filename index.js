@@ -27,6 +27,9 @@ if (!fs.existsSync(`${largeDirectory}`)) {
 
 const promises = [];
 
+let total = 0;
+let completed = 0;
+
 yearDirectories.forEach(yearDirectory => {
 
     // Create small year directory if it does not exist
@@ -51,20 +54,41 @@ yearDirectories.forEach(yearDirectory => {
 
         // Creating small image
         if (!fs.existsSync(`${smallDirectory}/${yearDirectory}/${imageName}`)) {
-            console.log(`[Photography Script] Adding small image optimization for [${smallDirectory}/${yearDirectory}/${imageName}]`);
-            promises.push(sharp(image).resize(400, 300).toFile(`${smallDirectory}/${yearDirectory}/${imageName}`));
+
+            promises.push(sharp(image).resize(400, 300).toFile(`${smallDirectory}/${yearDirectory}/${imageName}`).then(result => {
+                completed++;
+                console.log(`[Photography Script] - [${completed}/${total}] Image optimization for [${smallDirectory}/${yearDirectory}/${imageName}] [SM] completed`);
+
+                return Promise.resolve(result)
+            }));
+
+            total++;
         }
 
         // Creating medium image
         if (!fs.existsSync(`${mediumDirectory}/${yearDirectory}/${imageName}`)) {
-            console.log(`[Photography Script] Adding medium image optimization for [${mediumDirectory}/${yearDirectory}/${imageName}]`);
-            promises.push(sharp(image).resize(800, 600).toFile(`${mediumDirectory}/${yearDirectory}/${imageName}`));
+
+            promises.push(sharp(image).resize(800, 600).toFile(`${mediumDirectory}/${yearDirectory}/${imageName}`).then(result => {
+                completed++;
+                console.log(`[Photography Script] - [${completed}/${total}] Image optimization for [${mediumDirectory}/${yearDirectory}/${imageName}] [MD] completed`);
+
+                return Promise.resolve(result)
+            }));
+
+            total++;
         }
 
         // Creating large image
         if (!fs.existsSync(`${largeDirectory}/${yearDirectory}/${imageName}`)) {
-            console.log(`[Photography Script] Adding large image optimization for [${largeDirectory}/${yearDirectory}/${imageName}]`);
-            promises.push(sharp(image).resize(1600, 1200).toFile(`${largeDirectory}/${yearDirectory}/${imageName}`));
+
+            promises.push(sharp(image).resize(1600, 1200).toFile(`${largeDirectory}/${yearDirectory}/${imageName}`).then(result => {
+                completed++;
+                console.log(`[Photography Script] - [${completed}/${total}] Image optimization for [${largeDirectory}/${yearDirectory}/${imageName}] [LG] completed`);
+
+                return Promise.resolve(result)
+            }));
+
+            total++;
         }
 
     });
