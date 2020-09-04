@@ -54,7 +54,7 @@
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "ng-annotate-loader": "^0.6.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "npm-check-updates": "^4.0.1",
     "sass-loader": "^8.0.0",
     "sharp": "^0.23.4",
